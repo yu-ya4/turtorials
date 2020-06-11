@@ -9,4 +9,8 @@ class WorkerListView(TemplateView):
 
     def get(self, request, *args, **kwargs):
         context = super(WorkerListView, self).get_context_data(**kwargs)
+
+        workers = Worker.objects.all()
+        context["workers"] = workers
+
         return render(self.request, self.template_name, context)
