@@ -44,7 +44,7 @@ class Manager(models.Model):
     DEP_IS = 50  # 情報システム
 
     person = models.ForeignKey("Person", on_delete=models.CASCADE)
-    department = modes.IntegerField()
+    department = models.IntegerField()
     joined_at = models.DateTimeField()
     quited_at = models.DateTimeField(null=True, blank=True)
 
