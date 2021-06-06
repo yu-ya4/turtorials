@@ -23,6 +23,8 @@ import manager.views as manager_view
 urlpatterns = [
     path('admin/', admin.site.urls),
     path("worker_list/", manager_view.WorkerListView.as_view()),
+    path("login/", manager_view.CustomLoginView.as_view()),
+    # path("logout/", manager_view.logout_view),
 ]
 
 if settings.DEBUG:
