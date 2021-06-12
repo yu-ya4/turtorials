@@ -21,3 +21,13 @@ print("mode A")
 mode = tokenizer.Tokenizer.SplitMode.A
 [print(m.surface()) for m in tokenizer_obj.tokenize("国家公務員", mode)]
 # => ['国家', '公務', '員']
+
+
+# Morpheme information
+
+m = tokenizer_obj.tokenize("食べ", mode)[0]
+
+print(m.surface()) # => '食べ'
+print(m.dictionary_form()) # => '食べる'
+print(m.reading_form()) # => 'タベ'
+print(m.part_of_speech()) # => ['動詞', '一般', '*', '*', '下一段-バ行', '連用形-一般']
