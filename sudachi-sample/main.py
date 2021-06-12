@@ -31,3 +31,13 @@ print(m.surface()) # => '食べ'
 print(m.dictionary_form()) # => '食べる'
 print(m.reading_form()) # => 'タベ'
 print(m.part_of_speech()) # => ['動詞', '一般', '*', '*', '下一段-バ行', '連用形-一般']
+
+
+# Normalization
+
+print(tokenizer_obj.tokenize("附属", mode)[0].normalized_form())
+# => '付属'
+print(tokenizer_obj.tokenize("SUMMER", mode)[0].normalized_form())
+# => 'サマー'
+print(tokenizer_obj.tokenize("シュミレーション", mode)[0].normalized_form())
+# => 'シミュレーション'
